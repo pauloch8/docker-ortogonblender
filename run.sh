@@ -1,10 +1,11 @@
 docker run -it \
-  --name firefox-esr \
+  --name ortogonblender \
   --env="DISPLAY" \
   --env="QT_X11_NO_MITSHM=1" \
   --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-  -d firefox-esr  \
-&& docker stop firefox-esr \
+  --volume="/media/pauloh/Untitled/tomo:/tomo" \
+  -d ortogonblender /bin/bash \
+&& docker stop ortogonblender \
 && export containerId=$(docker ps -l -q) \
 && xhost +local:`docker inspect --format='{{ .Config.Hostname }}' $containerId` \
 && docker start $containerId

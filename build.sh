@@ -1,1 +1,1 @@
-docker build -t registry.gitlab.com/paulo-ch8/firefox-esr ./Dockerfile/
+docker build -t ortogonblender ./Dockerfile/
