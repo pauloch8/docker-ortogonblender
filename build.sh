@@ -1,1 +1,1 @@
-docker build -t ortogonblender:0.1 ./Dockerfile/
+docker build -t pauloch8/ortogonblender:0.1 ./Dockerfile/
